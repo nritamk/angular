@@ -8,6 +8,7 @@ import "./App.scss";
 import {
   ComponentRenderData,
   PageParamsProvider,
+  PlasmicCanvasHost,
   PlasmicComponent,
   PlasmicRootProvider,
 } from "@plasmicapp/loader-react";
@@ -79,7 +80,15 @@ function HomePage() {
   );
 }
 
-export default function App() {
+function PlasmicHostPage() {
+  return (
+    <PlasmicRootProvider loader={PLASMIC}>
+      <PlasmicCanvasHost />
+    </PlasmicRootProvider>
+  );
+}
+
+function MainLayout() {
   return (
     <PlasmicRootProvider loader={PLASMIC}>
       <Navbar />
@@ -89,6 +98,15 @@ export default function App() {
       </Routes>
       <Footer />
     </PlasmicRootProvider>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/plasmic-host" element={<PlasmicHostPage />} />
+      <Route path="*" element={<MainLayout />} />
+    </Routes>
   );
 }
 

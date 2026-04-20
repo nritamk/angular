@@ -1,0 +1,32 @@
+:host {
+  display: contents;
+}
+
+.float-cam {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 160px;
+  z-index: 200;
+  pointer-events: none;
+  will-change: transform;
+  /* Opacity controlled by CSS class — avoids GSAP tween conflicts */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  filter:
+    drop-shadow(0 0 3px rgba(255, 255, 255, 0.55))
+    drop-shadow(0 6px 20px rgba(0, 0, 0, 0.30));
+
+  &.cam-visible { opacity: 1; }
+
+  svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible;
+  }
+}
+
+@media (max-width: 960px) {
+  .float-cam { display: none; }
+}

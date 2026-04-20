@@ -1,0 +1,193 @@
+<svg viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="ds-grid" patternUnits="userSpaceOnUse" width="24" height="24">
+      <path d="M24 0 L0 0 0 24" fill="none" stroke="#C8C4BA" stroke-width="0.5" opacity="0.45"/>
+    </pattern>
+    <pattern id="ds-dots" patternUnits="userSpaceOnUse" width="24" height="24">
+      <circle cx="12" cy="12" r="0.8" fill="#5B9A3A" opacity="0.2"/>
+    </pattern>
+    <radialGradient id="ds-wheel" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="ds-clip">
+      <rect width="400" height="500"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#ds-clip)">
+    <!-- Background -->
+    <rect width="400" height="500" fill="#F7F5F0"/>
+    <rect width="400" height="500" fill="url(#ds-grid)"/>
+    <rect width="400" height="500" fill="url(#ds-dots)"/>
+
+    <!-- Ghost number -->
+    <text x="360" y="490" font-family="system-ui,sans-serif" font-size="160"
+          font-weight="800" fill="#1C1C1C" opacity="0.04" text-anchor="middle">04</text>
+
+    <!-- ── Colour wheel (top-right) ── -->
+    <!-- segments approximated with arcs -->
+    <path d="M336 76 L336 46 A30 30 0 0 1 362 61 Z" fill="#FF6B6B" opacity="0.75"/>
+    <path d="M336 76 L362 61 A30 30 0 0 1 362 91 Z" fill="#FF9E3D" opacity="0.75"/>
+    <path d="M336 76 L362 91 A30 30 0 0 1 336 106 Z" fill="#FFD93D" opacity="0.75"/>
+    <path d="M336 76 L336 106 A30 30 0 0 1 310 91 Z" fill="#8DC468" opacity="0.85"/>
+    <path d="M336 76 L310 91 A30 30 0 0 1 310 61 Z" fill="#4A90D9" opacity="0.75"/>
+    <path d="M336 76 L310 61 A30 30 0 0 1 336 46 Z" fill="#9B6BD9" opacity="0.75"/>
+    <!-- white center -->
+    <circle cx="336" cy="76" r="12" fill="#F7F5F0" stroke="#E0DDD5" stroke-width="1"/>
+    <circle cx="336" cy="76" r="5" fill="#1C1C1C" opacity="0.08"/>
+    <text x="336" y="116" font-family="system-ui,sans-serif" font-size="7"
+          fill="#5B9A3A" opacity="0.5" text-anchor="middle" letter-spacing="2">COLOUR</text>
+
+    <!-- ── Pen tool (top-left) ── -->
+    <!-- pen body -->
+    <rect x="28" y="40" width="8" height="50" rx="3" fill="#3A6B1F" transform="rotate(-35 32 65)"/>
+    <!-- pen tip -->
+    <polygon points="14,88 18,94 22,88" fill="#1C1C1C" opacity="0.7"/>
+    <!-- nib -->
+    <polygon points="18,89 16,95 20,95" fill="#5B9A3A" opacity="0.8"/>
+    <!-- bezier curve from pen -->
+    <path d="M20 93 Q60 110 100 80 Q140 50 170 90"
+          stroke="#5B9A3A" stroke-width="1.2" fill="none" stroke-dasharray="4 3" opacity="0.5"/>
+    <!-- anchor points -->
+    <rect x="17" y="90" width="6" height="6" rx="1" fill="none" stroke="#5B9A3A" stroke-width="1" opacity="0.7"/>
+    <rect x="97" y="77" width="6" height="6" rx="1" fill="none" stroke="#5B9A3A" stroke-width="1" opacity="0.7"/>
+    <rect x="167" y="87" width="6" height="6" rx="1" fill="none" stroke="#5B9A3A" stroke-width="1" opacity="0.7"/>
+    <!-- control handles -->
+    <line x1="20" y1="93" x2="40" y2="82" stroke="#5B9A3A" stroke-width="0.6" opacity="0.4"/>
+    <circle cx="40" cy="82" r="2" fill="none" stroke="#5B9A3A" stroke-width="0.8" opacity="0.5"/>
+    <line x1="100" y1="80" x2="130" y2="66" stroke="#5B9A3A" stroke-width="0.6" opacity="0.4"/>
+    <circle cx="130" cy="66" r="2" fill="none" stroke="#5B9A3A" stroke-width="0.8" opacity="0.5"/>
+
+    <!-- ── Ruler (left side) ── -->
+    <rect x="16" y="170" width="14" height="200" rx="2" fill="#E8E4DA" stroke="#C8C4BA" stroke-width="1"/>
+    <!-- ruler ticks -->
+    <line x1="24" y1="180" x2="29" y2="180" stroke="#1C1C1C" stroke-width="0.8" opacity="0.4"/>
+    <line x1="24" y1="190" x2="27" y2="190" stroke="#1C1C1C" stroke-width="0.6" opacity="0.3"/>
+    <line x1="24" y1="200" x2="29" y2="200" stroke="#1C1C1C" stroke-width="0.8" opacity="0.4"/>
+    <line x1="24" y1="210" x2="27" y2="210" stroke="#1C1C1C" stroke-width="0.6" opacity="0.3"/>
+    <line x1="24" y1="220" x2="29" y2="220" stroke="#1C1C1C" stroke-width="0.8" opacity="0.4"/>
+    <line x1="24" y1="230" x2="27" y2="230" stroke="#1C1C1C" stroke-width="0.6" opacity="0.3"/>
+    <line x1="24" y1="240" x2="29" y2="240" stroke="#1C1C1C" stroke-width="0.8" opacity="0.4"/>
+    <line x1="24" y1="250" x2="27" y2="250" stroke="#1C1C1C" stroke-width="0.6" opacity="0.3"/>
+    <line x1="24" y1="260" x2="29" y2="260" stroke="#1C1C1C" stroke-width="0.8" opacity="0.4"/>
+    <line x1="24" y1="270" x2="27" y2="270" stroke="#1C1C1C" stroke-width="0.6" opacity="0.3"/>
+    <line x1="24" y1="280" x2="29" y2="280" stroke="#1C1C1C" stroke-width="0.8" opacity="0.4"/>
+    <line x1="24" y1="290" x2="27" y2="290" stroke="#1C1C1C" stroke-width="0.6" opacity="0.3"/>
+    <line x1="24" y1="300" x2="29" y2="300" stroke="#1C1C1C" stroke-width="0.8" opacity="0.4"/>
+    <line x1="24" y1="320" x2="29" y2="320" stroke="#1C1C1C" stroke-width="0.8" opacity="0.4"/>
+    <line x1="24" y1="340" x2="29" y2="340" stroke="#1C1C1C" stroke-width="0.8" opacity="0.4"/>
+    <line x1="24" y1="360" x2="29" y2="360" stroke="#1C1C1C" stroke-width="0.8" opacity="0.4"/>
+
+    <!-- ── Geometric shapes (top center) ── -->
+    <!-- triangle -->
+    <polygon points="168,50 200,96 136,96"
+             fill="none" stroke="#5B9A3A" stroke-width="1.5" opacity="0.55"/>
+    <!-- circle -->
+    <circle cx="236" cy="72" r="24"
+            fill="none" stroke="#3A6B1F" stroke-width="1.5" opacity="0.45"/>
+    <!-- golden ratio spiral hint -->
+    <path d="M228 64 Q228 80 244 80 Q244 56 220 56"
+          fill="none" stroke="#8DC468" stroke-width="0.8" stroke-dasharray="3 2" opacity="0.4"/>
+
+    <!-- ── Measurement bracket around dock (outer frame) ── -->
+    <!-- top measurement -->
+    <line x1="120" y1="162" x2="280" y2="162" stroke="#5B9A3A" stroke-width="0.8" opacity="0.4"/>
+    <line x1="120" y1="158" x2="120" y2="166" stroke="#5B9A3A" stroke-width="1.2" opacity="0.5"/>
+    <line x1="280" y1="158" x2="280" y2="166" stroke="#5B9A3A" stroke-width="1.2" opacity="0.5"/>
+    <text x="200" y="159" font-family="monospace,system-ui" font-size="7"
+          fill="#5B9A3A" opacity="0.55" text-anchor="middle">130 px</text>
+    <!-- left measurement -->
+    <line x1="118" y1="178" x2="118" y2="263" stroke="#5B9A3A" stroke-width="0.8" opacity="0.4"/>
+    <line x1="114" y1="178" x2="122" y2="178" stroke="#5B9A3A" stroke-width="1.2" opacity="0.5"/>
+    <line x1="114" y1="263" x2="122" y2="263" stroke="#5B9A3A" stroke-width="1.2" opacity="0.5"/>
+    <text x="108" y="224" font-family="monospace,system-ui" font-size="7"
+          fill="#5B9A3A" opacity="0.55" text-anchor="middle" transform="rotate(-90 108 224)">85 px</text>
+
+    <!-- ── Camera dock ── -->
+    <rect x="132" y="174" width="136" height="92" rx="4" fill="#EDE8E0" opacity="0.55"/>
+    <rect x="135" y="178" width="130" height="85" rx="3"
+          stroke="#5B9A3A" stroke-width="1.5" stroke-dasharray="6 4" fill="none"/>
+    <path d="M135 191 L135 178 L148 178" stroke="#5B9A3A" stroke-width="2" fill="none" stroke-linecap="square"/>
+    <path d="M252 178 L265 178 L265 191" stroke="#5B9A3A" stroke-width="2" fill="none" stroke-linecap="square"/>
+    <path d="M135 250 L135 263 L148 263" stroke="#5B9A3A" stroke-width="2" fill="none" stroke-linecap="square"/>
+    <path d="M252 263 L265 263 L265 250" stroke="#5B9A3A" stroke-width="2" fill="none" stroke-linecap="square"/>
+    <line x1="196" y1="220.5" x2="204" y2="220.5" stroke="#5B9A3A" stroke-width="1" opacity="0.5"/>
+    <line x1="200" y1="216.5" x2="200" y2="224.5" stroke="#5B9A3A" stroke-width="1" opacity="0.5"/>
+    <text x="200" y="274" font-family="monospace,system-ui" font-size="8.5" fill="#5B9A3A"
+          text-anchor="middle" letter-spacing="4" opacity="0.7">CAM A</text>
+
+    <!-- ── Layer panel (right side) ── -->
+    <rect x="282" y="170" width="102" height="130" rx="4" fill="#EDEBE3" stroke="#C8C4BA" stroke-width="1"/>
+    <text x="290" y="184" font-family="system-ui,sans-serif" font-size="8"
+          fill="#1C1C1C" opacity="0.5" letter-spacing="1">LAYERS</text>
+    <line x1="282" y1="188" x2="384" y2="188" stroke="#C8C4BA" stroke-width="0.8"/>
+    <!-- layer rows -->
+    <rect x="288" y="194" width="12" height="8" rx="1" fill="#5B9A3A" opacity="0.6"/>
+    <rect x="305" y="195" width="52" height="6" rx="1" fill="#1C1C1C" opacity="0.14"/>
+    <rect x="288" y="208" width="12" height="8" rx="1" fill="#8DC468" opacity="0.5"/>
+    <rect x="305" y="209" width="40" height="6" rx="1" fill="#1C1C1C" opacity="0.11"/>
+    <rect x="288" y="222" width="12" height="8" rx="1" fill="#3A6B1F" opacity="0.55"/>
+    <rect x="305" y="223" width="60" height="6" rx="1" fill="#1C1C1C" opacity="0.12"/>
+    <rect x="288" y="236" width="12" height="8" rx="1" fill="#FF6B6B" opacity="0.45"/>
+    <rect x="305" y="237" width="44" height="6" rx="1" fill="#1C1C1C" opacity="0.10"/>
+    <rect x="288" y="250" width="12" height="8" rx="1" fill="#4A90D9" opacity="0.45"/>
+    <rect x="305" y="251" width="36" height="6" rx="1" fill="#1C1C1C" opacity="0.09"/>
+    <rect x="288" y="264" width="12" height="8" rx="1" fill="#C8C4BA" opacity="0.6"/>
+    <rect x="305" y="265" width="48" height="6" rx="1" fill="#1C1C1C" opacity="0.08"/>
+    <rect x="288" y="278" width="12" height="8" rx="1" fill="#FFD93D" opacity="0.55"/>
+    <rect x="305" y="279" width="55" height="6" rx="1" fill="#1C1C1C" opacity="0.10"/>
+
+    <!-- ── Typography specimen (bottom-left) ── -->
+    <text x="44" y="326" font-family="Georgia,serif" font-size="32"
+          font-weight="700" fill="#1C1C1C" opacity="0.75">Ag</text>
+    <rect x="44" y="330" width="56" height="1" rx="0.5" fill="#5B9A3A" opacity="0.3"/>
+    <text x="44" y="344" font-family="system-ui,sans-serif" font-size="8"
+          fill="#5B9A3A" opacity="0.6" letter-spacing="2">TYPEFACE</text>
+    <!-- scale steps -->
+    <text x="44" y="360" font-family="Georgia,serif" font-size="16" fill="#1C1C1C" opacity="0.5">Aa</text>
+    <text x="72" y="360" font-family="Georgia,serif" font-size="12" fill="#1C1C1C" opacity="0.38">Bb</text>
+    <text x="92" y="360" font-family="Georgia,serif" font-size="9" fill="#1C1C1C" opacity="0.28">Cc Dd</text>
+
+    <!-- ── Palette swatches (bottom) ── -->
+    <rect x="16"  y="385" width="36" height="22" rx="2" fill="#1C1C1C"/>
+    <rect x="58"  y="385" width="36" height="22" rx="2" fill="#3A6B1F"/>
+    <rect x="100" y="385" width="36" height="22" rx="2" fill="#5B9A3A"/>
+    <rect x="142" y="385" width="36" height="22" rx="2" fill="#8DC468"/>
+    <rect x="184" y="385" width="36" height="22" rx="2" fill="#CDE8B4"/>
+    <rect x="226" y="385" width="36" height="22" rx="2" fill="#F0EDE5" stroke="#D4D0C6" stroke-width="1"/>
+    <rect x="268" y="385" width="36" height="22" rx="2" fill="#FF6B6B" opacity="0.7"/>
+    <rect x="310" y="385" width="36" height="22" rx="2" fill="#4A90D9" opacity="0.7"/>
+    <rect x="352" y="385" width="36" height="22" rx="2" fill="#FFD93D" opacity="0.7"/>
+
+    <!-- ── Design grid overlay (decorative) ── -->
+    <line x1="200" y1="130" x2="200" y2="164" stroke="#5B9A3A" stroke-width="0.6" opacity="0.2" stroke-dasharray="3 3"/>
+    <line x1="200" y1="270" x2="200" y2="380" stroke="#5B9A3A" stroke-width="0.6" opacity="0.2" stroke-dasharray="3 3"/>
+    <line x1="44" y1="220" x2="118" y2="220" stroke="#5B9A3A" stroke-width="0.6" opacity="0.2" stroke-dasharray="3 3"/>
+
+    <!-- ── Eyedropper tool (bottom-right) ── -->
+    <rect x="310" y="320" width="8" height="40" rx="3" fill="#D4D0C6" stroke="#A8A4A0" stroke-width="0.8"
+          transform="rotate(-45 314 340)"/>
+    <polygon points="330,315 338,307 344,313 340,322 332,320"
+             fill="#5B9A3A" opacity="0.7" stroke="#3A6B1F" stroke-width="0.8"/>
+    <circle cx="346" cy="312" r="3" fill="#8DC468" opacity="0.8"/>
+
+    <!-- ── Spacing/grid tick labels ── -->
+    <text x="44" y="420" font-family="monospace,system-ui" font-size="6.5"
+          fill="#5B9A3A" opacity="0.45" text-anchor="middle">#1C1C1C</text>
+    <text x="86" y="420" font-family="monospace,system-ui" font-size="6.5"
+          fill="#5B9A3A" opacity="0.45" text-anchor="middle">#3A6B1F</text>
+    <text x="128" y="420" font-family="monospace,system-ui" font-size="6.5"
+          fill="#5B9A3A" opacity="0.45" text-anchor="middle">#5B9A3A</text>
+
+    <!-- ── Bottom: artboard label ── -->
+    <rect x="16" y="436" width="200" height="20" rx="3" fill="#EDE8E0" stroke="#D4D0C6" stroke-width="0.8"/>
+    <text x="24" y="450" font-family="system-ui,sans-serif" font-size="8"
+          fill="#1C1C1C" opacity="0.45" letter-spacing="1">Artboard / 400 × 500</text>
+
+    <!-- ── Design studio mood: pencil sketch lines ── -->
+    <line x1="50" y1="145" x2="106" y2="161" stroke="#C8C4BA" stroke-width="0.7" opacity="0.5"/>
+    <line x1="54" y1="150" x2="110" y2="166" stroke="#C8C4BA" stroke-width="0.5" opacity="0.35"/>
+    <line x1="58" y1="155" x2="114" y2="171" stroke="#C8C4BA" stroke-width="0.5" opacity="0.25"/>
+  </g>
+</svg>

@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     port: 4200,
     open: true,
-    allowedHosts: ["devserver-main--justvish.netlify.app"],
+    allowedHosts: true,
   },
   build: {
     outDir: "dist",
